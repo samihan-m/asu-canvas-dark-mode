@@ -1,0 +1,243 @@
+/*Everything - these two need to work together for some reason.*/
+#content {
+	background-color: #101010;
+	
+}
+#application {
+	background-color: #101010;
+}
+
+/*Dashboard Header LOL*/
+
+
+
+
+/*Topbar ASU Links*/
+#custom-asu-header-ul#custom-asu-header-ul li a {
+	color: #c49d0c !important;
+}
+#custom-asu-header-ul#custom-asu-header-ul li a:hover {
+	color: #a64805 !important;
+}
+
+
+
+
+/*Date and Day display - class specifiers are doubled.*/
+.cjUyb_bGBk.cjUyb_ycrn.cjUyb_bGBk.cjUyb_ycrn {
+	font-size: 0.8em;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/*Calendar Day element (each individual Day, Date, Class list)*/
+.Day-styles__root.planner-day {
+	border-style: solid;
+	border-width: 2px;
+	border-color: white;
+	padding: 10px;
+	color: white;			
+	background-color: #3e3e3e;
+}
+
+/*Class name display box*/
+.Grouping-styles__root.planner-grouping {
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+	background-color: #202020;
+	/*filter: grayscale(45%);*/
+}
+
+/*Color around each class name*/
+.Grouping-styles__overlay{
+	background-color: #202020 !important;
+	display: none;
+}
+
+/*Class name text*/
+span[class="Grouping-styles__title"]{
+	background: #202020;
+	text-align: right !important;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	
+}
+
+/*Trying to clear weird white lines at the bottom of Class name text*/
+.Grouping-styles__title::after {
+	content: none;
+	height: 0 !important;
+}
+
+/*Calendar element Event Text color*/
+.PlannerItem-styles__title a span {
+	color: #e3a622;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 1.2em;
+}
+
+/*Announcement items besides the class name*/
+.Grouping-styles__items {	
+	border-style: solid solid solid inset;
+	border-width: 1px 1px 1px 7px;
+}
+
+/*Nothing Planned Yet display*/
+span[class="MYpOQ_bGBk MYpOQ_ImeN MYpOQ_UeJS"] {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 1.2em;
+	color: #e3a622;
+}
+
+
+
+
+
+/*Sidebar - excludes text in buttons/links (the reason for the not(span) and not(a)) - excludes textarea for right hand sidebar*/
+div[role="dialog"] *:not(span):not(textarea):not(a) {
+	color: white;
+	background-color: #3e3e3e;
+}
+/*Sidebar text that isn't in buttons. (needed for right hand sidebar) */
+span[class="fCrpb_bGBk fCrpb_egrg"] {
+	color: white;
+	background-color: #3e3e3e;
+}
+/*Sidebar links*/
+div[role="dialog"] a {
+	color: #e3a622;
+}
+/*Sidebar links hover*/
+div[role="dialog"] a:hover {
+	color: #a64805;
+}
+
+
+/*Sidebar*/
+#header {
+	background-color: #000000;
+}
+
+
+
+
+
+
+
+/*Course pages*/
+
+
+/*Course Title at the top*/
+nav[aria-label="breadcrumbs"] * {
+	color: white;
+	background-color: #3e3e3e;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+
+/*Selected options on the left*/
+nav[aria-label="Courses Navigation Menu"] * li a[aria-current="page"] {
+	color: #a64805;
+}
+
+/*Header of links on the left*/
+span[id="section-tabs-header-subtitle"]:not(div) {
+	color: white;
+}
+/*Links on the left*/
+nav[aria-label="Courses Navigation Menu"] * li a {
+	color: #e3a622;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 1.2em;
+}
+/*Hovering links on the left*/
+nav[aria-label="Course Navigation Menu"] * li a:hover {
+	color: #a64805;
+}
+
+
+
+
+/*Strong text on course pages*/
+div[id="content"] :not(span) {
+	color: #c0c0c0;
+}
+/*Text on course pages*/
+div[id="content"] span {
+	/*color: ##858585; this works when this is disabled so ill work with that lol*/
+}
+/*Header text on course pages*/
+div[id="content"] * h1 {
+	color: white !important;
+}
+/*Header text on course pages*/
+div[id="content"] * h2 {
+	color: white;
+}
+/*Lists on course pages*/
+div[id="content"] * li {
+	color: white;
+}
+/*Links on course pages*/
+div[id="content"] * a {
+	color: #e3a622;
+}
+div[id="content"] * a:hover {
+	color: #a64805;
+}
+/*Images on course pages*/
+div[id="content"] * img {
+	filter: grayscale(20%);
+}
+/*Link icons on course pages*/
+span[class="ui-icon ui-icon-extlink ui-icon-inline"] {
+	color: white;
+	/*Doesn't work.*/
+}
+
+
+
+
+
+/*Modules page*/
+/*Modules page header*/
+div[class="header-bar"] {
+	background-color: transparent;
+	border-bottom: none;
+}
+/*Modules page container*/
+#context_modules_sortable_container {
+	color: white;
+	background-color: #3e3e3e;
+}
+/*Modules page module headers*/
+div[id="context_modules"] {
+	filter: brightness(80%);
+}
+/*Modules page module container*/
+div[id="context_modules"] * {
+	/*background-color: #202020;
+	color: white;*/
+	filter: invert(100%);
+}
+/*Module item titles*/
+span[title] {
+	color: black; /*this needs to be inverted because I filter inverted everything (see above)*/
+}
+
+
+
+
+
+/*Recorded lecture page*/
+/*Top toolbar*/
+div[class="sticky-toolbar"] {
+	background-color: transparent;
+	display: none;
+}
+/*Bottom toolbar*/
+div[class="module-sequence-footer"] {
+	background-color: transparent;
+}
+
+
+
