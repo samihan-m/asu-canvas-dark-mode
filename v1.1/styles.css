@@ -1,0 +1,225 @@
+/*This is going to try to more cleanly target elements in a top-down order.*/
+
+/*Color palette:
+sidebar: #000000;
+background: #101010
+next:  #3e3e3e
+next: #202020
+
+link: #e3a622;
+link hover: #a64805;
+*/
+
+/*Global image dimming*/
+img {
+	filter: brightness(70%);
+}
+
+/*sidebar*/
+header[id="header"] > div {
+	background-color: #000000;
+}
+
+/*base background*/
+div[id="application"] {
+	background-color: #101010;
+}
+/*global (?) links*/
+div[id="application"] a {
+	color: #e3a622;
+}
+/*global (?) links hover*/
+div[id="application"] a:hover {
+	color: #a64805;
+}
+
+/*ASU header links - using !important because these links are !important'd by the website*/
+#custom-asu-header-links ul li a {
+	color: #e3a622 !important;
+}
+/*ASU header link hover - using !important because these links are !important'd by the website*/
+#custom-asu-header-links ul li a:hover {
+	color: #a64805 !important;
+}
+/*maybe differentiate intra-canvas links from external links by using href and checking for www. */
+
+
+
+
+
+/*Entire Dashboard - top of hierarchy*/
+div[id="dashboard"] {
+	-background-color: #202020;
+}
+/*Dashboard text - also basic h1*/
+h1 {
+	color: white;
+}
+/*Dashboard header text but more specific*/
+span[class="hidden-phone"] {
+	padding-left: 50px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+/*Notification text - using !important because i can't get any more specific*/
+span[class="notification_message"] p span {
+	background-color: inherit !important;
+	color: red !important;
+}
+/*Notification subtext*/
+span[class="notification_account_content_text"] {
+	color: #dddddd;
+}
+/*Making header buttons white*/
+div[id="dashboard"] button[type="button"] :not(span) {
+	color: white;
+}
+/*Day header text - if problems with h2 padding occurs, move the padding trait to a more specific trait*/
+div[id="dashboard"] h2 {
+	color: white;
+	padding-left: 15px;
+}
+/*Day header text, but more specific*/
+div[class~="planner-day"] h2 * {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;	
+	background-color: #3e3e3e !important;
+}
+/*Day header text, but specifically the day*/
+div[class~="planner-day"] h2 :first-child {
+	padding-left: 15px;
+	font-size: 1.00025em;
+}
+/*Day header text, but specifically the date*/
+div[class~="planner-day"] h2 :last-child {
+	font-size: 1.0005em;
+}
+/*Nothing Planned Yet text*/
+span[class="MYpOQ_bGBk MYpOQ_ImeN MYpOQ_UeJS"] {
+	color: white;
+	font-size: 1.2em;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-align: center;
+	border-style: solid;
+	border-width: 1px;
+	border-color: inherit;
+	margin: 0px !important;	/*using !important because I can't override the element.style*/
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+/*One div down - dashboard wrapper*/
+div[id="dashboard"] * div {
+	background-color: #202020; 
+}
+/*Attempting to fix dashboard header*/
+div[id="dashboard_header_container"] {
+	-background-color: #202020; 
+}
+/*Two divs down - dashboard day elements*/
+div[id="dashboard"] * div div {
+	background-color: #3e3e3e;
+}
+/*Border around each day*/
+div[class*="Day-styles__root planner-day"][class*="Day-styles__root planner-day"] {
+	background-color: #3e3e3e;
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+	padding: 15px;
+}
+/*Announcement Class Info Display - this actually affects all links on the main page, so be careful*/
+div[id="dashboard"] a {
+	background-image: none !important; /*need this important*/
+}
+/*Class Display Name - using double specifier to override text-align*/
+span[class="Grouping-styles__title"][class="Grouping-styles__title"] {
+	text-align: right;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	background-color: #202020;
+}
+/*Announcement Unit*/
+ol[class="Grouping-styles__items"] {
+	background-color: #202020;
+	border-color: inherit;
+	border-style: solid;
+	border-width: 1px;
+}
+/*Fixing announcement unit background color*/
+div[class="PlannerItem-styles__root planner-item"] {
+	border-color: inherit;
+	border-style: solid;
+	border-width: 1px;
+}
+/*Trying to clear weird white lines at the bottom of Class name text*/
+.Grouping-styles__title::after {
+	content: none;
+	height: 0 !important;
+}
+
+
+
+/*Other page displays*/
+/*general page - not inverting pictures*/
+div[id="not_right_side"]:not(img) {
+	
+}
+/*Other page link displays*/
+div[id="not_right_side"] a {
+	
+}
+/*Icons on other pages*/
+span[class="ig-type-icon"][class="ig-type-icon"] i {
+	color: #8c1d40;
+	
+}
+/*Modules page footer - doubled specifiers*/
+div[class="module-sequence-footer-content"][class="module-sequence-footer-content"] {
+	background-color: #202020;
+	padding: 10px; /*this is so the previous/next buttons look better relative to the footer*/
+}
+/*Next and Previous module buttons*/
+div[class="module-sequence-footer-content"] a {
+	background-color: inherit;
+	color: #8c1d40;
+	border-color: #8c1d40;
+}
+/*Header bar that shows up on some pages*/
+.header-bar.header-bar {
+	background-color: #202020;
+	display: none;
+}
+/*Nav text (directory at top of page)*/
+nav[id="breadcrumbs"] {
+	filter: invert(100%);
+}
+/*Nav text links*/
+nav[id="breadcrumbs"] a {
+	filter: invert(100%); /*re-verting links after the general nav invert affects them*/
+}
+
+/*Announcements page text*/
+div[id="announcements_on_home_page"] {
+	color: white;
+}
+/*Modules list*/
+div[id="content"] {
+	-background-color: #3e3e3e;
+	-color: white;
+}
+
+
+/*Sidebar pop-outs*/
+div[role="dialog"] {
+	background-color: #3e3e3e;
+	color: white;
+}
+/*Side pop-out link*/
+div[role="dialog"] a {
+	color: #e3a622;
+}
+/*Side pop-out link hover*/
+div[role="dialog"] a:hover {
+	color: #a64805;
+}
+/*Side pop-out subtext color*/
+div[role="dialog"] * li div {
+	color: white;
+}
