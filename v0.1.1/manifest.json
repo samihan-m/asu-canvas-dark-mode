@@ -2,7 +2,7 @@
   "manifest_version": 2,
  
   "name": "Sleek Night Mode Canvas (ASU)",
-  "version": "1.1.0",
+  "version": "0.1.1",
   "description": "Makes a night mode for canvas.asu.edu sites. I also tried to make it a bit minimalist/sleek/cool-looking. Will update this once I learn CSS better. -Samihan",
  
   "content_scripts": [{
