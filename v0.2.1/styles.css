@@ -1,0 +1,186 @@
+/*This is going to try to more cleanly target elements in a top-down order. Again.*/
+
+/*Color palette:
+sidebar: #000000;
+background: #101010
+next:  #3e3e3e
+next: #202020
+
+link: #e3a622;
+link hover: #a64805;
+
+maroon:  #8c1d40;
+
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+*/
+
+
+
+
+
+
+
+
+
+
+
+/*basic white text*/
+span, div, label, p, h1, h2 {
+	color: white;
+}
+
+/*basic link*/
+a {
+	color: #e3a622;
+}
+/*basic link hover*/
+a:hover {
+	color: #a64805;
+}
+
+
+
+
+
+
+
+
+/*Making some button text black again (today button, 'submitted' on dashboard module assignments, logout button)*/
+#planner-today-btn > span , li[class="BadgeList-styles__item"] span , form[action="/logout"] span {
+	color: black;
+}
+/*Nav breadcrumbs*/
+#breadcrumbs#breadcrumbs {
+	background-color: #000000;
+}
+/*Aside text (right-side displays on pages)*/
+aside[id="right-side"] table {
+	color: black;
+}
+
+/*Clicking on a zoom link dialog box*/
+span[role="dialog"][aria-label="Calendar Event Details"] {
+	filter: invert(100%);	/*re-verting after the overlay around this is inverted (see below)*/
+}
+/*the semitransparent white overlay around the dialog box*/
+span[dir="ltr"] > span {
+	filter: invert(100%);
+}
+/*Dialog text*/
+span[role="dialog"][aria-label="Calendar Event Details"] span {
+	color: black;
+}
+
+
+
+
+/*farthest back background*/
+#application {
+	background-color: #000000;
+}
+/*UI Block elements - basically everything*/
+#main div {
+	background-color: #101010;
+}
+/*Left Sidebar*/
+div[role="dialog"] {
+	background-color: #000000;
+}
+
+
+
+
+
+
+
+/*ASU header links - using !important because these links are !important'd by the website*/
+#custom-asu-header-links ul li a {
+	color: #e3a622 !important;
+}
+/*ASU header link hover - using !important because these links are !important'd by the website*/
+#custom-asu-header-links ul li a:hover {
+	color: #a64805 !important;
+}
+
+
+
+
+
+
+
+
+
+
+/*Calendar tab selected day*/
+td[class~="fc-state-highlight"] {
+	color: black;
+}
+/*Calendar tab month nav buttons*/
+span[class="navigation_buttons ui-buttonset"] button span i {
+	color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Dashboard module class name display fixes*/
+/*Border around each day*/
+div[class*="Day-styles__root planner-day"][class*="Day-styles__root planner-day"] {
+	background-color: #3e3e3e;
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+	padding: 15px;
+}
+/*Announcement Class Info Display - this actually affects all links on the main page, so be careful*/
+div[id="dashboard"] a {
+	background-image: none !important; /*need this important*/
+}
+/*Class Display Name - using double specifier to override text-align*/
+span[class="Grouping-styles__title"][class="Grouping-styles__title"] {
+	text-align: right;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	background-color: #202020;
+}
+/*Trying to clear weird white lines at the bottom of Class name text*/
+.Grouping-styles__title::after {
+	content: none;
+	height: 0 !important;
+}
+
+/*Fixing announcement unit background color*/
+div[class="PlannerItem-styles__root planner-item"] {
+	border-color: inherit;
+	border-style: solid;
+	border-width: 1px;
+}
+
+/*Dashboard module day display*/
+#dashboard-planner > div h2 div {
+	font-size: 1.1em;
+	padding-left: 5px;
+}
+/*Nothing Planned Yet text*/
+span[class="MYpOQ_bGBk MYpOQ_ImeN MYpOQ_UeJS"] {
+	font-size: 1.2em;
+	text-align: center;
+	border-style: solid;
+	border-width: 1px;
+	border-color: inherit;
+	margin: 0px !important;	/*using !important because I can't override the element.style*/
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #3e3e3e;
+}
+
+
+
