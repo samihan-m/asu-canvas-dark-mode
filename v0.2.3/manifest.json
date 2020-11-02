@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+ 
+  "name": "Night Mode Canvas (ASU)",
+  "version": "0.2.3",
+  "description": "Makes a night mode for canvas.asu.edu sites. I also tried to make it a bit minimalist/sleek/cool-looking. Will update this once I learn CSS better. -Samihan",
+ 
+  "content_scripts": [{
+    "css": ["canvasNightMode.css"],
+    "js": ["content.js"],
+    "matches": ["https://canvas.asu.edu/*"]
+  }],
+
+  "permissions": ["activeTab","declarativeContent", "storage"],
+
+  "background": {
+	"scripts": ["background.js"],
+	"persistent": false
+  },
+
+  "page_action": {
+	"default_popup": "popup.html",
+	"default_icon": {
+		"16": "images/icons/logo-16.png",
+        	"32": "images/icons/logo-32.png",
+        	"64": "images/icons/logo-64.png",
+        	"128": "images/icons/logo-128.png"
+	}
+  },
+
+  "icons": {
+	"16": "images/icons/logo-16.png",
+        "32": "images/icons/logo-32.png",
+        "64": "images/icons/logo-64.png",
+        "128": "images/icons/logo-128.png"
+  }
+}
