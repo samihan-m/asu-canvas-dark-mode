@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+ 
+  "name": "Night Mode Canvas (ASU)",
+  "version": "0.3.0",
+  "description": "Makes a night mode for canvas.asu.edu sites. Toggle button appears when you click the Search Bar icon on canvas.asu.edu sites. Will update as I get better at this. -Samihan",
+ 
+  "content_scripts": [{
+    "UNUSEDcss": ["canvasNightMode.css"],
+    "js": ["content.js"],
+    "matches": ["https://canvas.asu.edu/*"],
+    "run_at": "document_start"	//trying to solve flicker
+  }],
+
+  "permissions": ["storage","tabs","declarativeContent","activeTab","http://canvas.asu.edu/","https://canvas.asu.edu/"],
+  "background": {
+	"scripts": ["background.js"],
+	"persistent": false
+  },
+  "web_accessible_resources": ["scriptToggle.js","canvasNightMode.css"],
+
+  "page_action": {
+	"default_popup": "popup.html",
+	"default_icon": {
+		"16": "images/icons/logo-16.png",
+        	"32": "images/icons/logo-32.png",
+        	"64": "images/icons/logo-64.png",
+        	"128": "images/icons/logo-128.png"
+	}
+  },
+
+  "icons": {
+	"16": "images/icons/logo-16.png",
+        "32": "images/icons/logo-32.png",
+        "64": "images/icons/logo-64.png",
+        "128": "images/icons/logo-128.png"
+  }
+}
