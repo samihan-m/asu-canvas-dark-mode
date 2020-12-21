@@ -1,4 +1,4 @@
-# asu-canvas-dark-mode
+# asu-canvas-dark-mode-extension
  A Chrome extension. Enables a dark theme for ASU's Canvas pages. Also slightly redesigns the main Dashboard page for clarity.
  
  Uses CSS for switching the color palette to a dark version.
